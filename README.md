@@ -37,10 +37,10 @@ Shows map image around current position. Aimed to give navigation ability for wa
 * 2000 x 2000 px cropped to 250 x 250 gives 64 parts (from `0.png` to `63.png`).
 
 ### resources\r.xml
-This file has all images ids. For 64 parts it should looks like below.
-If map is smaller, then comment unused lines by adding `<!--` `-->` around them.
-Later using full 2000 x 2000 px map, uncomment them.
-If device has more then 16 KB memory, you can generate more ids using `gen_res_ids.bat` and make map larger.
+* This file has all images ids. For 2000 x 2000 px / 64 parts it should looks like below and you don't need to edit it.
+* If map is smaller, then comment unused lines by adding `<!--` `-->` around them.
+* Later using full 2000 x 2000 px map, uncomment them.
+* If device has more then 16 KB memory, you can generate more ids using `gen_res_ids.bat` and make map larger.
 
 ```
 <drawables>
@@ -53,9 +53,9 @@ If device has more then 16 KB memory, you can generate more ids using `gen_res_i
 ```
 
 ### map.mc
-Check where your map starts (left upper corner) and ends (right down corner).
-And enter those coordinates here (latitude and longitude).
-Edit full map size if is smaller then 2000 px.
+* Check where your map starts (left upper corner) and ends (right down corner).
+* And enter those coordinates here (latitude and longitude).
+* Edit full map size if is smaller then 2000 px.
 
 ```
 const ut=83.64, un=-180.0,  // left upper corner
@@ -63,9 +63,9 @@ const ut=83.64, un=-180.0,  // left upper corner
       imgs=250, rx=2000/imgs, ry=2000/imgs,  // size of cropped part, width and height of full map
 ```
 
-Check references to images ids. This is copy from `resources\r.xml`.
-Below there are ids for 64 parts.
-If map is smaller then comment unused ids adding `/*` `*/` around them.
+* Check references to images ids. This is copy from `resources\r.xml`.
+* Below there are ids for 2000 x 2000 px / 64 parts.
+* If map is smaller then comment unused ids adding `/*` `*/` around them.
 ```
 var r = [ :m0, :m1, :m2, :m3, :m4, :m5, :m6, :m7,
           :m8, :m9,:m10,:m11,:m12,:m13,:m14,:m15,
@@ -85,8 +85,8 @@ openssl pkcs8 -topk8 -inform PEM -outform DER -in dev_key.pem -out dev_key.der -
 ```
 
 ### Map.prg
-Add path to dev-kit `bin` dir. Example: `C:\ciq\bin\`
-Replace `DEVICE` by your device id (check `manifest.xml` or `bin\devices.xml` at dev-kit).
+* Add path to dev-kit `bin` dir. Example: `C:\ciq\bin\`
+* Replace `DEVICE` by your device id (check `manifest.xml` or `bin\devices.xml` at dev-kit).
 ```
 monkeyc -y dev_key.der -f MapOfflineGPS\monkey.jungle -r -o Map.prg -d DEVICE
 ```
