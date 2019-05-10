@@ -1,0 +1,78 @@
+<resources>
+
+<drawables>
+<bitmap id="i" filename="i.png"/>
+
+<bitmap id="m0" filename="m\0.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m1" filename="m\1.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m2" filename="m\2.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m3" filename="m\3.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m4" filename="m\4.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m5" filename="m\5.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m6" filename="m\6.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m7" filename="m\7.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m8" filename="m\8.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m9" filename="m\9.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m10" filename="m\10.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m11" filename="m\11.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m12" filename="m\12.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m13" filename="m\13.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m14" filename="m\14.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m15" filename="m\15.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m16" filename="m\16.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m17" filename="m\17.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m18" filename="m\18.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m19" filename="m\19.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m20" filename="m\20.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m21" filename="m\21.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m22" filename="m\22.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m23" filename="m\23.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m24" filename="m\24.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m25" filename="m\25.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m26" filename="m\26.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m27" filename="m\27.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m28" filename="m\28.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m29" filename="m\29.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m30" filename="m\30.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m31" filename="m\31.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m32" filename="m\32.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m33" filename="m\33.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m34" filename="m\34.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m35" filename="m\35.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m36" filename="m\36.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m37" filename="m\37.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m38" filename="m\38.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m39" filename="m\39.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m40" filename="m\40.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m41" filename="m\41.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m42" filename="m\42.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m43" filename="m\43.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m44" filename="m\44.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m45" filename="m\45.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m46" filename="m\46.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m47" filename="m\47.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m48" filename="m\48.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m49" filename="m\49.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m50" filename="m\50.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m51" filename="m\51.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m52" filename="m\52.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m53" filename="m\53.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m54" filename="m\54.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m55" filename="m\55.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m56" filename="m\56.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m57" filename="m\57.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m58" filename="m\58.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m59" filename="m\59.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m60" filename="m\60.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m61" filename="m\61.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m62" filename="m\62.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+<bitmap id="m63" filename="m\63.png"><palette disableTransparency="true"><color>000000</color><color>FFFFFF</color></palette></bitmap>
+
+</drawables>
+
+
+<strings>
+<string id="an">Map</string>
+</strings>
+
+</resources>

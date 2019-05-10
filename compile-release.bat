@@ -1,0 +1,1 @@
+cmd /k monkeyc -y dev_key.der -o Map.prg -f monkey.jungle -r    -d DEVICE
