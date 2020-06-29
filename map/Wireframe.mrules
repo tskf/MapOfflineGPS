@@ -1,0 +1,40 @@
+features
+	lines
+		line big : @isOneOf(highway, motorway, motorway_link, trunk, trunk_link, primary, primary_link, secondary, tertiary)
+		line small : @isOneOf(highway, unclassified, residential, service, living_street, track, path, pedestrian, steps, footway, cycleway)
+
+		line bdash : waterway
+		line dash : railway=rail OR natural=water
+
+	points, areas
+		place big : @isOneOf(place, city, town, village)
+		place small : @isOneOf(place, locality, isolated_dwelling, suburb) OR aeroway=aerodrome OR landuse=raceway OR landuse=forest OR natural=wood OR water=lake
+
+rules
+
+	target : line*
+		define
+			line-width : 1
+		if : *dash
+			define
+				line-style : dashlong
+		draw : line
+
+	target : line b*
+		define
+			text-halo-width : 3
+			font-size : 8
+			min-zoom : 12
+		draw : text
+
+	target : place*
+		define
+			text-halo-width : 3
+		if : *big
+			define
+				font-size : 10:8; 12:12
+		if : *small
+			define
+				font-size : 9
+				min-zoom : 12
+		draw : text

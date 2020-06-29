@@ -21,7 +21,7 @@ Shows map image around current position. Aimed to give navigation ability for wa
 
 ### Prepare map.png
 * Image should be black-and-white, 2000 x 2000 px.
-* Look for printable/simple/bw/outline maps online or decrease color depth using graphic program.
+* Look for printable/simple/bw/outline maps online, or use [map viewer](map/map_viewer.md) with editable style, or decrease color depth in graphic program.
 * Suggestion: you can mark on map some paths and points.
 
 ### Download
