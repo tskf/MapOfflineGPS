@@ -75,6 +75,8 @@ monkeyc -y dev_key.der -f MapOfflineGPS\monkey.jungle -r -o Map.prg -d DEVICE
 
 ## Edit size
 
+<details><summary>Click for details.</summary>
+
 ### resources\r.xml
 * This file has all images ids. For 2000 x 2000 px / 64 parts it should looks like below and you don't need to edit it.
 * If map is smaller, then comment unused lines by adding `<!--` `-->` around them.
@@ -110,3 +112,5 @@ var r = [ :m0, :m1, :m2, :m3, :m4, :m5, :m6, :m7,
          :m48,:m49,:m50,:m51,:m52,:m53,:m54,:m55,
          :m56,:m57,:m58,:m59,:m60,:m61,:m62,:m63];
 ```
+
+</details>
