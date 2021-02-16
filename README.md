@@ -25,11 +25,11 @@ Shows map image around current position. Aimed to give navigation ability for wa
 * Suggestion: you can mark on map some paths and points.
 
 ### Download
-* [ImageMagick](https://imagemagick.org/script/download.php#windows) zip. You can use `portable-Q16` version, `x86` or `x64` as your system.
+* [**ImageMagick**](https://imagemagick.org/script/download.php#windows) zip. You can use `portable-Q16` version, `x86` or `x64` as your system.
   - archive.org / imagemagick.org: [7.0.11-0](http://web.archive.org/web/20210215174500/https://imagemagick.org/script/download.php#windows) → portable-Q16-x: [86](http://web.archive.org/web/20210215174500/https://download.imagemagick.org/ImageMagick/download/binaries/ImageMagick-7.0.11-0-portable-Q16-x86.zip) | [64](http://web.archive.org/web/20210215174500/https://download.imagemagick.org/ImageMagick/download/binaries/ImageMagick-7.0.11-0-portable-Q16-x64.zip)
-* OpenSSL zip: [curl.se](https://curl.se/windows/) (`Specifications` → `32bit` or `64`) or [bintray.com](https://bintray.com/vszakats/generic/openssl) (version → `Files` → `win32` or `64` zip).
+* **OpenSSL** zip: [curl.se](https://curl.se/windows/) (`Specifications` → `32bit` or `64`) or [bintray.com](https://bintray.com/vszakats/generic/openssl) (version → `Files` → `win32` or `64` zip).
   - archive.org / curl.se: [1.1.1i](http://web.archive.org/web/20210206153430/https://curl.se/windows/) → [32](http://web.archive.org/web/20210206153430/https://curl.se/windows/dl-7.75.0/openssl-1.1.1i-win32-mingw.zip) | [64](http://web.archive.org/web/20210206153430/https://curl.se/windows/dl-7.75.0/openssl-1.1.1i-win64-mingw.zip) or bintray.com: [1.1.1h](http://web.archive.org/web/20210203211808/https://bintray.com/vszakats/generic/openssl) → [32](http://web.archive.org/web/20210203212704/https://dl.bintray.com/vszakats/generic/openssl-1.1.1h-win32-mingw.zip) | [64](http://web.archive.org/web/20210203212909/https://dl.bintray.com/vszakats/generic/openssl-1.1.1h-win64-mingw.zip)
-* The [dev-kit](https://developer.garmin.com/connect-iq/sdk/). Current version requires SDK Manager (login required) to download kit and selected devices.
+* [**Dev-kit**](https://developer.garmin.com/connect-iq/sdk/). Current version requires SDK Manager (login required) to download kit and selected devices.
   - 3.1.9 was the last version with `Direct Download` zip (contains kit and all devices).
   - archive.org / developer.garmin.com: [3.1.9](http://web.archive.org/web/20200712153511/https://developer.garmin.com/connect-iq/sdk/) → [zip](http://web.archive.org/web/20200712175328/https://developer.garmin.com/downloads/connect-iq/sdks/connectiq-sdk-win-3.1.9-2020-06-24-1cc9d3a70.zip)
 
