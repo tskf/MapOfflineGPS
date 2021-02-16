@@ -38,7 +38,7 @@ Shows map image around current position. Aimed to give navigation ability for wa
 * At the end of `Path` variable, separate by semi-colon `;`
   - `sysdm.cpl` → `Advanced` → `Environment Variables...` → `System variables` → `Path`
   - Example: `C:\ImageMagick\;C:\openssl\;C:\ciq\bin\`
-  - Than you can use short: `convert`, `openssl`, `monkeyc`
+  - Then you can use short: `convert`, `openssl`, `monkeyc`
 * Or add before each command: `C:\ciq\bin\monkeyc`
 * If using SDK Manager, then path is:
   - `%AppData%\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-VERSION\bin\`
