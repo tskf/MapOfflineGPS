@@ -25,16 +25,55 @@ Shows map image around current position. Aimed to give navigation ability for wa
 * Suggestion: you can mark on map some paths and points.
 
 ### Download
-* [ImageMagick](https://imagemagick.org/script/download.php) zip. You can use `portable-Q16` version, `x86` or `x64` as your system.
-* [OpenSSL](https://bintray.com/vszakats/generic/openssl) zip. Choose latest version like `1.1.1b`, click `Files` and download `win32` or `64` zip.
-* The [dev-kit](https://developer.garmin.com/connect-iq/sdk/) zip, choose the first `Direct Download`.
+* [ImageMagick](https://imagemagick.org/script/download.php#windows) zip. You can use `portable-Q16` version, `x86` or `x64` as your system.
+  - archive.org / imagemagick.org: [7.0.11-0](http://web.archive.org/web/20210215174500/https://imagemagick.org/script/download.php#windows) → portable-Q16-x: [86](http://web.archive.org/web/20210215174500/https://download.imagemagick.org/ImageMagick/download/binaries/ImageMagick-7.0.11-0-portable-Q16-x86.zip) | [64](http://web.archive.org/web/20210215174500/https://download.imagemagick.org/ImageMagick/download/binaries/ImageMagick-7.0.11-0-portable-Q16-x64.zip)
+* OpenSSL zip: [curl.se](https://curl.se/windows/) (`Specifications` → `32bit` or `64`) or [bintray.com](https://bintray.com/vszakats/generic/openssl) (choose version → `Files` → `win32` or `64` zip).
+  - archive.org / curl.se: [1.1.1i](http://web.archive.org/web/20210206153430/https://curl.se/windows/) → [32](http://web.archive.org/web/20210206153430/https://curl.se/windows/dl-7.75.0/openssl-1.1.1i-win32-mingw.zip) | [64](http://web.archive.org/web/20210206153430/https://curl.se/windows/dl-7.75.0/openssl-1.1.1i-win64-mingw.zip) or bintray.com: [1.1.1h](http://web.archive.org/web/20210203211808/https://bintray.com/vszakats/generic/openssl) → [32](http://web.archive.org/web/20210203212704/https://dl.bintray.com/vszakats/generic/openssl-1.1.1h-win32-mingw.zip) | [64](http://web.archive.org/web/20210203212909/https://dl.bintray.com/vszakats/generic/openssl-1.1.1h-win64-mingw.zip)
+* The [dev-kit](https://developer.garmin.com/connect-iq/sdk/). Current version requires SDK Manager (login required) to download kit and selected devices.
+  - 3.1.9 was the last version with `Direct Download` zip (contains kit and all devices).
+  - archive.org / developer.garmin.com: [3.1.9](http://web.archive.org/web/20200712153511/https://developer.garmin.com/connect-iq/sdk/) → [zip](http://web.archive.org/web/20200712175328/https://developer.garmin.com/downloads/connect-iq/sdks/connectiq-sdk-win-3.1.9-2020-06-24-1cc9d3a70.zip)
+
+### Paths
+* Add paths to dirs where unpacked.
+* At the end of `Path` variable, separate by semi-colon `;`
+  - `sysdm.cpl` → `Advanced` → `Environment Variables...` → `System variables` → `Path`
+  - Example: `C:\ImageMagick\;C:\openssl\;C:\ciq\bin\`
+  - Than you can use short: `convert`, `openssl`, `monkeyc`
+* Or add before each command: `C:\ciq\bin\monkeyc`
+* If using SDK Manager, then path is:
+  - `%AppData%\Garmin\ConnectIQ\Sdks\connectiq-sdk-win-VERSION\bin\`
 
 ### resources\m
 * You can use bat scripts from temp dir `map\`.
-* Add path to ImageMagick dir (where unpacked). Example: `C:\ImageMagick\`
-* Use ImageMagick to crop prepared map: `convert map.png -crop 250x250 m\%%01d.png`
+* ImageMagick:
+  - `index-colors.bat` - simply decrease color depth: `convert map-color.png -threshold 70% map.png`
+  - `crop.bat` - crop prepared map (create `m` dir first): `convert map.png -crop 250x250 m\%01d.png`
 * Check if map is correctly cropped and copy it to: `resources\m` dir.
 * 2000 x 2000 px cropped to 250 x 250 gives 64 parts (from `0.png` to `63.png`).
+
+### map.mc
+* Check where your map starts (left upper corner) and ends (right down corner).
+* And enter those coordinates here (latitude and longitude).
+```
+const ut=83.64, un=-180.0,  // left upper corner
+      dt=-66.20, dn=180.0,  // right down corner
+```
+
+### dev_key.der
+* Generate key using OpenSSL - `gen_key.bat`:
+```
+openssl genrsa -out dev_key.pem 4096
+openssl pkcs8 -topk8 -inform PEM -outform DER -in dev_key.pem -out dev_key.der -nocrypt
+```
+
+### Map.prg
+* Replace `DEVICE` by your device id (check `manifest.xml` or `bin\devices.xml` at kit) - `compile-release.bat`:
+```
+monkeyc -y dev_key.der -f MapOfflineGPS\monkey.jungle -r -o Map.prg -d DEVICE
+```
+
+
+## Edit size
 
 ### resources\r.xml
 * This file has all images ids. For 2000 x 2000 px / 64 parts it should looks like below and you don't need to edit it.
@@ -53,14 +92,9 @@ Shows map image around current position. Aimed to give navigation ability for wa
 ```
 
 ### map.mc
-* Check where your map starts (left upper corner) and ends (right down corner).
-* And enter those coordinates here (latitude and longitude).
-* Edit full map size if is smaller then 2000 px.
-
+* Edit full map size if is different then 2000 px.
 ```
-const ut=83.64, un=-180.0,  // left upper corner
-      dt=-66.20, dn=180.0,  // right down corner
-      imgs=250, rx=2000/imgs, ry=2000/imgs,  // size of cropped part, width and height of full map
+imgs=250, rx=2000/imgs, ry=2000/imgs,  // size of cropped part, width and height of full map
 ```
 
 * Check references to images ids. This is copy from `resources\r.xml`.
@@ -75,18 +109,4 @@ var r = [ :m0, :m1, :m2, :m3, :m4, :m5, :m6, :m7,
          :m40,:m41,:m42,:m43,:m44,:m45,:m46,:m47,
          :m48,:m49,:m50,:m51,:m52,:m53,:m54,:m55,
          :m56,:m57,:m58,:m59,:m60,:m61,:m62,:m63];
-```
-
-### dev_key.der
-Generate key using OpenSSL (add path where unpacked).
-```
-openssl genrsa -out dev_key.pem 4096
-openssl pkcs8 -topk8 -inform PEM -outform DER -in dev_key.pem -out dev_key.der -nocrypt
-```
-
-### Map.prg
-* Add path to dev-kit `bin` dir. Example: `C:\ciq\bin\`
-* Replace `DEVICE` by your device id (check `manifest.xml` or `bin\devices.xml` at dev-kit).
-```
-monkeyc -y dev_key.der -f MapOfflineGPS\monkey.jungle -r -o Map.prg -d DEVICE
 ```
